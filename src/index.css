@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Centauri';
+  src: url('./fonts/Centauri.otf') format('opentype');
+}
+
+body {
+  font-family: 'Centauri', monospace;
+}
