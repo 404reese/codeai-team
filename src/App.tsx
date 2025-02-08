@@ -1,4 +1,5 @@
 import React from 'react';
+import TeamMemberComponent from "./components/TeamMemberComponent"; 
 
 interface TeamMember {
   img: string;
@@ -15,9 +16,11 @@ const TeamSection: React.FC<TeamSectionProps> = ({ title, members }) => (
     <h2 className="text-3xl font-bold text-center">{title}</h2>
     <div className="team-section flex justify-center flex-wrap gap-4 mt-6">
       {members.map((member, index) => (
-        <div key={index} className="team-member bg-fuchsia-950 p-4 rounded-xl overflow-hidden w-40 h-80 flex items-center justify-center hover:w-64 hover:scale-110 hover:bg-violet-950 transition-all duration-400 transform origin-center">
-          <img src={member.img} alt={member.alt} className="rounded-xl w-full h-full object-cover" />
-        </div>
+        // <div key={index} className="team-member bg-fuchsia-950 p-4 rounded-xl overflow-hidden w-40 h-80 flex items-center justify-center hover:w-64 hover:scale-110 hover:bg-violet-950 transition-all duration-400 transform origin-center">
+        //   <img src={member.img} alt={member.alt} className="rounded-xl w-full h-full object-cover" />
+        // </div>
+        <TeamMemberComponent key={index} {...member} />
+
       ))}
     </div>
   </div>
@@ -25,24 +28,25 @@ const TeamSection: React.FC<TeamSectionProps> = ({ title, members }) => (
 
 const App = () => {
   const coreMembers = [
-    { img: 'src/core ui/san bw.png', alt: 'Core team member 1' },
-    { img: 'src/core ui/shub bw.png', alt: 'Core team member 2' },
-    { img: 'src/core ui/za bw.png', alt: 'Core team member 3' },
-    { img: 'src/core ui/as bw.png', alt: 'Core team member 4' },
-    { img: 'src/core ui/vid bw.png', alt: 'Core team member 5' },
-    { img: 'src/core ui/titi bw.png', alt: 'Core team member 6' },
-    { img: 'src/core ui/ved bw.png', alt: 'Core team member 7' },
-    { img: 'src/core ui/dos bw.png', alt: 'Core team member 8' },
+    { img: 'src/core ui/san bw.png', hoverImg: "src/core ui/san c.png", alt: 'Core team member 1', position: 'Community Coordinator', name: 'Sanket Dangle'},
+    { img: 'src/core ui/shub bw.png', hoverImg: "src/core ui/shub c.png", alt: 'Core team member 2', position: 'Finance Coordinator', name: 'Shubham Shah'},
+    { img: 'src/core ui/za bw.png', hoverImg: "src/core ui/za c.png", alt: 'Core team member 3', position: 'Vice Chairperson', name: 'Zainuddin Fatakdawala' },
+    { img: 'src/core ui/as bw.png', hoverImg: "src/core ui/as c.png", alt: 'Core team member 4', position: 'Chairperson', name: 'Asmit Dash' },
+    { img: 'src/core ui/vid bw.png', hoverImg: "src/core ui/vid c.png", alt: 'Core team member 5', position: 'Digital Media Coordinator', name: 'Vidhi Bhanushali' },
+    { img: 'src/core ui/titi bw.png', hoverImg: "src/core ui/titi c.png", alt: 'Core team member 6', position: 'Events Coordinator', name: 'Titiksha Bhavsar' },
+    { img: 'src/core ui/ved bw.png', hoverImg: "src/core ui/ved c.png", alt: 'Core team member 7', position: 'Technical Coordinator', name: 'Vedant Hundare' },
+    // { img: 'src/core ui/dos bw.png', hoverImg: "src/core ui/dos c.png", alt: 'Core team member 8', position: 'Developer', name: 'San' },
   ];
 
   const subcoreMembers = [
-    { img: 'src/subcore ui/pooja bw.png', alt: 'Subcore team member 1' },
-    { img: 'src/subcore ui/aishwarya bw.png', alt: 'Subcore team member 2' },
-    { img: 'src/subcore ui/riddhesh bw.png', alt: 'Subcore team member 3' },
-    { img: 'src/subcore ui/avani bw.png', alt: 'Subcore team member 4' },
-    { img: 'src/subcore ui/aryan bw.png', alt: 'Subcore team member 5' },
-    { img: 'src/subcore ui/vivek bw.png', alt: 'Subcore team member 6' },
+    { img: 'src/subcore ui/pooja bw.png', hoverImg: "src/subcore ui/pooja c.png", alt: 'Subcore team member 1', position: 'Marketing Admin', name: 'Pooja Shah' },
+    { img: 'src/subcore ui/aishwarya bw.png', hoverImg: "src/subcore ui/aishwarya c.png", alt: 'Subcore team member 2', position: 'Publicity Admin', name: 'Asihwarya Kewale' },
+    { img: 'src/subcore ui/riddhesh bw.png', hoverImg: "src/subcore ui/riddhesh c.png", alt: 'Subcore team member 3', position: 'Digital Media Admin', name: 'Riddhesh C' },
+    { img: 'src/subcore ui/avani bw.png', hoverImg: "src/subcore ui/avani c.png", alt: 'Subcore team member 4', position: 'Social Media Admin', name: 'Avani Mahadik' },
+    { img: 'src/subcore ui/aryan bw.png', hoverImg: "src/subcore ui/aryan c.png", alt: 'Subcore team member 5', position: 'Event Admin', name: 'Aryan Mandke' },
+    { img: 'src/subcore ui/vivek bw.png', hoverImg: "src/subcore ui/vivekc.png", alt: 'Subcore team member 6', position: 'Technical Admin', name: 'Vivek Masuna' },
   ];
+  
 
   return (
     <div className="bg-[#04021B] text-white font-orbitron">
