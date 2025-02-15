@@ -83,6 +83,7 @@ const App = () => {
         <a className="px-4 py-2 border border-pink-500 text-pink-500 rounded-full hover:bg-pink-500 hover:text-white transition" href="#">Join Us</a> */}
       </header>
       <div className='text-center h-[80vh] flex flex-col justify-center'>
+        
         <h1 className="text-4xl font-bold mt-32">BRAINS BEHIND</h1>
         <h1 className="text-4xl font-bold mt-4">THE CODE</h1>
         

@@ -39,7 +39,7 @@ const Carousel: React.FC<CarouselProps> = ({ slides }) => {
   }, [currentIndex]); // Re-run the effect when `currentIndex` changes
 
   return (
-    <div className="max-w-[1400px] h-[780px] w-full m-auto py-16 px-4 relative group">
+    <div className="max-w-[1400px]  w-full m-auto py-16 px-4 relative group">
       {/* Only Image element is used here */}
       <div
         className="w-full bg-fuchsia-950 flex justify-center items-center bg-cover bg-no-repeat bg-center duration-500"
